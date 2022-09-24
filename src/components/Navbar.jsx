@@ -25,7 +25,7 @@ function NavBar() {
                 </Menu.Item>
                 <Menu.Item key="3" disabled={false} icon={<MoneyCollectOutlined />}>
                     <Link to="/exchanges">Exchanges</Link>
-                </Menu.Item>
+                </Menu.Item>    
                 <Menu.Item key="4" disabled={false} icon={<BulbOutlined />}>
                     <Link to="/news">News</Link>
                 </Menu.Item>
