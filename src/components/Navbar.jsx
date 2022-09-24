@@ -23,7 +23,7 @@ function NavBar() {
                 <Menu.Item key="2" disabled={false} icon={<FundOutlined />}>
                     <Link to="/cryptocurrencies">Cryptocurrencies</Link>
                 </Menu.Item>
-                <Menu.Item key="3" disabled={false} icon={<MoneyCollectOutlined />}>
+                <Menu.Item key="3" disabled={true} icon={<MoneyCollectOutlined />}>
                     <Link to="/exchanges">Exchanges</Link>
                 </Menu.Item>    
                 <Menu.Item key="4" disabled={false} icon={<BulbOutlined />}>
