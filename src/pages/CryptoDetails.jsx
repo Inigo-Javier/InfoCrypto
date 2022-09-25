@@ -7,7 +7,7 @@ import { Col, Row, Typography, Select } from 'antd'
 import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCircleOutlined, StopOutlined, TrophyOutlined, CheckOutlined, NumberOutlined, } from '@ant-design/icons'
 
 import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/cryptoApi'
-// import LineChart from '../components/LineChart'
+// import LineChart from './LineChart'   
 
 const { Title, Text } = Typography
 const { Option } = Select
@@ -16,7 +16,7 @@ const CryptoDetails = () => {
     const { coinId } = useParams()
     const [timeperiod, setTimeperiod] = useState('7d')
     const { data, isFetching } = useGetCryptoDetailsQuery(coinId)
-    const { data: coinHistory } = useGetCryptoHistoryQuery({ coinId, timeperiod })
+    // const { data: coinHistory } = useGetCryptoHistoryQuery({ coinId, timeperiod })
     const cryptoDetails = data?.data?.coin
 
 
@@ -99,7 +99,7 @@ const CryptoDetails = () => {
                 </Row>
                 <Col className="coin-links">
                     <Title level={3} className="coin-details-heading">{cryptoDetails.name} Links</Title>
-                    {cryptoDetails.links?.map((link) => (
+                    {cryptoDetails.links?.map((link,index) => (
                         <Row className="coin-link" key={link.name}>
                             <Title level={5} className="link-name">{link.type}</Title>
                             <a href={link.url} target="_blank" rel="noreferrer">{link.name}</a>
